@@ -1,0 +1,15 @@
+{
+  "name": "meating-slide-2021-03",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn install && vs build",
+    "postbuild": "open -a Preview meating_slide_202103.pdf",
+    "clean": "rimraf meating_slide_202103.pdf .vivliostyle",
+    "clean-full": "rimraf node_modules meating_slide_202103.pdf .vivliostyle"
+  },
+  "dependencies": {
+    "@vivliostyle/theme-slide": "^0.3.0",
+    "rimraf": "^3.0.2"
+  }
+}

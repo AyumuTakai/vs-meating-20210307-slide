@@ -1,0 +1,47 @@
+section {
+    width: 100%;
+}
+
+@page {
+    @top-right-corner {
+        margin-top: 7mm;
+        margin-bottom: 1mm;
+        margin-left: -10mm;
+        content: counters(page,' / ',pages);
+    }
+}
+
+@page {
+    background-image: url("bg_body.jpg");
+    background-size: cover;
+    background-position: center -250px;
+}
+
+
+@page:first {
+    background-image: url("bg_title.jpg");
+    background-size: cover;
+    background-position: center center;
+    @bottom-right {
+        margin-top: -15mm;
+        margin-bottom: 10mm;
+        margin-left: -50mm;
+        width: 50mm;
+        padding-right: 5mm;
+        content: "2021.03.07";
+    }
+}
+
+@page:nth(2) {
+    counter-reset: page 0;
+}
+
+
+body > section {
+    page-break-inside: auto;
+    padding-top: 2mm;
+}
+body > section:nth-of-type(n+2) h1 {
+    position: absolute;
+    top: 0mm;
+}
